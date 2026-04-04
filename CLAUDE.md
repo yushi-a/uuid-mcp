@@ -86,9 +86,9 @@ export type GenerateUuidInput = z.infer<typeof GenerateUuidInput>;
 
 | ツール名 | 機能 |
 |---------|------|
-| `generate_uuid` | UUID v7 を生成。`count` 引数で一括生成 (デフォルト: 1) |
-| `validate_uuid` | UUID の形式チェック (正規表現) |
-| `parse_uuid` | UUID v7 からタイムスタンプ等を抽出 |
+| `generate_uuids` | UUID v7 を生成。`count` 引数で一括生成 (デフォルト: 1) |
+| `validate_uuids` | UUID の形式チェック (正規表現) |
+| `parse_uuids` | UUID v7 からタイムスタンプ等を抽出 |
 
 ### 技術スタック
 
