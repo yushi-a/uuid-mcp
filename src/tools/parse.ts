@@ -1,5 +1,5 @@
 import { validate, version } from "uuid";
-import { ParseUuidsInput, ParseUuidsOutput } from "../schemas/parse.js";
+import type { ParseUuidsInput, ParseUuidsOutput } from "../schemas/parse.js";
 
 function toLocalISOString(date: Date): string {
   const offsetMinutes = -date.getTimezoneOffset();
@@ -22,8 +22,7 @@ function extractTimestampMs(uuid: string): number {
 }
 
 export function parseUuids(input: ParseUuidsInput): ParseUuidsOutput {
-  const { uuids } = ParseUuidsInput.parse(input);
-  const results = uuids.map((uuid) => {
+  const results = input.uuids.map((uuid) => {
     if (!validate(uuid)) {
       return { uuid, error: "invalid UUID format" };
     }

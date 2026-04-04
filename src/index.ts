@@ -12,30 +12,36 @@ const server = new McpServer({
   version: "0.1.0",
 });
 
-server.tool(
+server.registerTool(
   "generate_uuids",
-  "UUID v7 を生成する",
-  GenerateUuidsInput.shape,
+  {
+    description: "UUID v7 を生成する",
+    inputSchema: GenerateUuidsInput,
+  },
   (input) => {
     const result = generateUuids(input);
     return { content: [{ type: "text", text: JSON.stringify(result) }] };
   },
 );
 
-server.tool(
+server.registerTool(
   "validate_uuids",
-  "UUID の形式チェックを行う",
-  ValidateUuidsInput.shape,
+  {
+    description: "UUID の形式チェックを行う",
+    inputSchema: ValidateUuidsInput,
+  },
   (input) => {
     const result = validateUuids(input);
     return { content: [{ type: "text", text: JSON.stringify(result) }] };
   },
 );
 
-server.tool(
+server.registerTool(
   "parse_uuids",
-  "UUID v7 からタイムスタンプ等を抽出する",
-  ParseUuidsInput.shape,
+  {
+    description: "UUID v7 からタイムスタンプ等を抽出する",
+    inputSchema: ParseUuidsInput,
+  },
   (input) => {
     const result = parseUuids(input);
     return { content: [{ type: "text", text: JSON.stringify(result) }] };
