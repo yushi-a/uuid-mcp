@@ -1,5 +1,5 @@
 {
-  "name": "uuid-mcp",
+  "name": "@yushi-a/uuid-mcp",
   "version": "0.1.0",
   "description": "MCP server for UUID v7 generation and validation",
   "type": "module",

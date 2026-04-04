@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "uuid": {
+      "command": "npx",
+      "args": ["-y", "@yushi-a/uuid-mcp"]
+    }
+  }
+}
