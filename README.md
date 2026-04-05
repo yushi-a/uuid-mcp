@@ -43,3 +43,7 @@ npm run build   # ビルド
 npm test        # テスト
 npm run check   # Lint + フォーマットチェック
 ```
+
+## License
+
+[MIT](./LICENSE)
